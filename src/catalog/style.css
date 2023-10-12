@@ -9,22 +9,18 @@ body {
 .header {
   background-color: #2c1619;
   width: 100%;
-  font-size: 36px;
   padding: 30px;
-  justify-content: space-between;
-  display: flex;
+  text-align: center;
   align-items: center;
+}
+.header a {
   text-decoration: none;
   color: #ffffff;
+  font-size: 36px;
 }
-.link {
-  color: #d9d9d9;
-  text-decoration: none;
-  font-size: 24px;
+.header a::after {
   color: #ffffff;
-}
-.link:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .content {
   background-color: #4b2b30;
@@ -114,12 +110,6 @@ th {
     height: 200px;
     font-size: 36px;
     padding: 45px;
-  }
-  .header {
-    font-size: 20px;
-  }
-  .link {
-    font-size: 16px;
   }
   table {
     width: 100%;
