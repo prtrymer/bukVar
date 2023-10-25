@@ -15,9 +15,14 @@
       src="https://kit.fontawesome.com/5f53a1900a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
-    <div class="header">БукVar</div>
+    <div class="header">
+      <a href="../main/index.html">БукVar</a>
+    </div>
     <div class="content">
       <div class="input">
         <img src="images/avatar-girl.svg" alt="avatar" />
@@ -33,6 +38,31 @@
           <input type="text" placeholder="Прізвище" id="surname" />
           <input type="text" placeholder="По батькові" id="patronymic" />
           <input type="text" placeholder="Email" id="email" />
+          <fieldset>
+            <legend>Обери стать</legend>
+            <div>
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+                checked
+                class="gender"
+              />
+              <label for="male" class="gender-name">Чоловік</label>
+            </div>
+            <div>
+              <input
+                class="gender"
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+              />
+              <label for="female" class="gender-name">Жінка</label>
+            </div>
+          </fieldset>
+          <input type="text" id="phone" placeholder="Введіть номер телефону" />
           <input type="date" id="birthdate" />
           <select id="role" name="role">
             <option>Роль</option>
