@@ -67,6 +67,21 @@ body {
   display: none;
   align-items: center;
 }
+fieldset {
+  max-width: 60%;
+  margin: auto;
+  border-radius: 5px;
+}
+legend {
+  margin-left: 10px;
+  padding: 0 5px;
+}
+.gender {
+  margin: 10px;
+}
+.gender-name {
+  font-weight: 300;
+}
 .input p {
   margin: auto;
   text-align: left;
@@ -84,7 +99,7 @@ body {
 .input i {
   padding-left: 30px;
 }
-.input input {
+.input input:not(.gender) {
   display: block;
   margin: 20px auto;
   width: 60%;
@@ -117,6 +132,7 @@ body {
   cursor: pointer;
   font-size: 20px;
 }
+
 .sign {
   text-align: center;
   color: #4b2b30;
@@ -166,7 +182,9 @@ body {
     font-size: 12px;
     display: block;
   }
-
+  fieldset {
+    max-width: 100%;
+  }
   .input {
     order: 2;
     margin: 10px 5px;
@@ -189,7 +207,7 @@ body {
     padding: 5px 10px;
   }
 
-  .input input,
+  .input input:not(.gender),
   .input select {
     width: 100%;
   }
