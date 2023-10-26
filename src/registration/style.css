@@ -55,6 +55,12 @@ body {
   width: 60%;
   height: 10%;
 }
+.error-message {
+  font-size: 16px;
+  margin-left: 230px;
+  color: red;
+  display: none;
+}
 .input img {
   width: 28%;
   height: 28%;
@@ -67,6 +73,14 @@ body {
   display: none;
   align-items: center;
 }
+.input table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.input th td{
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
 fieldset {
   max-width: 60%;
   margin: auto;
@@ -132,7 +146,6 @@ legend {
   cursor: pointer;
   font-size: 20px;
 }
-
 .sign {
   text-align: center;
   color: #4b2b30;
@@ -192,6 +205,19 @@ legend {
     margin: 40px auto;
     padding: 20px;
   }
+  .input table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .input th, td {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    text-align: left;
+    border: none;
+  }
+
 
   .input img {
     width: 30%;
