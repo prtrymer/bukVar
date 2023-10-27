@@ -200,7 +200,6 @@ legend {
   }
   .input {
     order: 2;
-    margin: 10px 5px;
     width: 80%;
     margin: 40px auto;
     padding: 20px;
@@ -216,6 +215,12 @@ legend {
     padding: 5px 0;
     text-align: left;
     border: none;
+  }
+  .input  th:nth-child(5),
+  td:nth-child(5),
+  th:nth-child(8),
+  td:nth-child(8) {
+    display: none;
   }
 
 
