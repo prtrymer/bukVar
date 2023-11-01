@@ -1,3 +1,5 @@
-$(document).ready(function () {
-    $("#phone").inputmask("+38 (999) 999-99-99");
+document.addEventListener("DOMContentLoaded", function () {
+  const phoneInput = document.getElementById("phone");
+
+  Inputmask("+38(999)999-99-99").mask(phoneInput);
 });

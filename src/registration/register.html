@@ -17,11 +17,10 @@
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
-    <script src="js/table.js">
-    </script>
+    <script src="js/table.js"></script>
     <script src="js/validation.js"></script>
     <script src="js/mask.js"></script>
-      </head>
+  </head>
   <body>
     <div class="header">
       <a href="../main/index.html">БукVar</a>
@@ -29,7 +28,7 @@
     <div class="content">
       <div class="input">
         <img src="images/avatar-girl.svg" alt="avatar" />
-        <form id="signup-form">
+        <form id="signup-form" name="form">
           <input type="file" id="image-file" accept="image/x-png, image/jpeg" />
           <label for="image-file"
             ><p>
@@ -37,18 +36,52 @@
                 class="fa-solid fa-arrow-up-from-bracket"
               ></i></p
           ></label>
-          <input type="text" id="name" name="name" placeholder="Ім'я" required
-                 pattern="^([А-ЯІЇЄҐ'’][а-яіїєґ'’]*)([А-ЯІЇЄҐ'’][а-яіїєґ'’]*|-?[А-ЯІЇЄҐ'’][а-яіїєґ'’]*)?$">
-          <span class="error-message">Ім'я повинно мати велику першу літеру і не містити цифр.</span>
-          <input type="text" placeholder="Прізвище" id="surname" name="surname" required
-                 pattern="^([А-ЯІЇЄҐ'’][а-яіїєґ'’]*)(\s[А-ЯІЇЄҐ'’][а-яіїєґ'’]*|-?[А-ЯІЇЄҐ'’][а-яіїєґ'’]*)?$">
-          <span class="error-message">Прізвище повинно мати велику першу літеру і не містити цифр.</span>
-          <input type="text" placeholder="По батькові" id="patronymic" name="patronymic" required
-                 pattern="^([А-ЯІЇЄҐ'’][а-яіїєґ'’]*)(\s[А-ЯІЇЄҐ'’а-яіїєґ'’]*|-?[А-ЯІЇЄҐ'’а-яіїєґ'’]*[А-ЯІЇЄҐ'’][а-яіїєґ'’]*)?$">
-          <span class="error-message">По-батькові повинно мати велику першу літеру і не містити цифр.</span>
-          <input type="text" placeholder="Email" id="email" name="email" required
-                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
-          <span class="error-message">Некоректний формат електронної пошти.</span>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ім'я"
+            required
+            pattern="^([А-ЯІЇЄҐ'’][а-яіїєґ'’]{1,})([А-ЯІЇЄҐ'’][а-яіїєґ'’]*|-?[А-ЯІЇЄҐ'’][а-яіїєґ'’]*)?$"
+          />
+          <span class="error-message"
+            >Ім'я має бути написане кирилецею, повинно мати велику першу літеру
+            і не містити цифр.</span
+          >
+          <input
+            type="text"
+            placeholder="Прізвище"
+            id="surname"
+            name="surname"
+            required
+            pattern="^([А-ЯІЇЄҐ'’][а-яіїєґ'’]{1,})(\s[А-ЯІЇЄҐ'’][а-яіїєґ'’]*|-?[А-ЯІЇЄҐ'’][а-яіїєґ'’]*)?$"
+          />
+          <span class="error-message"
+            >Прізвище має бути написане кирилецею, повинно мати велику першу
+            літеру і не містити цифр.</span
+          >
+          <input
+            type="text"
+            placeholder="По батькові"
+            id="patronymic"
+            name="patronymic"
+            pattern="^([А-ЯІЇЄҐ'’][а-яіїєґ'’]{1,})(\s[А-ЯІЇЄҐ'’а-яіїєґ'’]*|-?[А-ЯІЇЄҐ'’а-яіїєґ'’]*[А-ЯІЇЄҐ'’][а-яіїєґ'’]*)?$"
+          />
+          <span class="error-message"
+            >По батькові має бути написане кирилецею, повинно мати велику першу
+            літеру і не містити цифр.</span
+          >
+          <input
+            type="text"
+            placeholder="Email"
+            id="email"
+            name="email"
+            required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+          />
+          <span class="error-message"
+            >Некоректний формат електронної пошти. Приклад: ex123@ex.com</span
+          >
           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
           <fieldset>
             <legend>Обери стать</legend>
@@ -74,41 +107,65 @@
               <label for="female" class="gender-name">Жінка</label>
             </div>
           </fieldset>
-          <input type="text" id="phone" placeholder="Введіть номер телефону" name="phone" required/>
-          <input type="date" id="birthdate" name="birthdate" required/>
+          <span class="error-message">Оберіть стать</span>
+          <input
+            type="text"
+            id="phone"
+            placeholder="+38(000)-000-0000"
+            name="phone"
+            required
+          /><span class="error-message">Заповніть номер телефону</span>
+          <input type="date" id="birthdate" name="birthdate" />
+          <span class="error-message">Ваш вік має становити 18+ років</span>
           <select id="role" name="role">
             <option>Роль</option>
             <option value="role2">Власник</option>
             <option value="role3">Адмін</option>
             <option value="role4">Клієнт</option>
           </select>
-          <input type="password" placeholder="Пароль"  required
-                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W\_]).{8,}$">
-          <span class="error-message">Пароль повинен містити мінімум 1 маленьку літеру, 1 велику літеру, 1 цифру, 1 спеціальний символ і бути не менше 8 символів.</span>
-          <button type="submit" class="submit-btn">Зареєструватись</button>
+          <span class="error-message">Оберіть роль</span>
+          <input
+            type="password"
+            placeholder="Пароль"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W\_]).{8,}$"
+            required
+          />
+          <span class="error-message"
+            >Пароль повинен містити мінімум 1 маленьку літеру, 1 велику літеру,
+            1 цифру, 1 спеціальний символ і бути не менше 8 символів.</span
+          >
+          <button
+            type="submit"
+            class="submit-btn"
+            name="submit-btn"
+            id="submit-btn"
+          >
+            Зареєструватись
+          </button>
           <div class="sign">
             Вже маєш акаунт? <a href="sign.html">Увійти</a>
           </div>
         </form>
         <table id="data-table">
           <thead>
-          <tr>
-            <th>Select</th>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Patronymic</th>
-            <th>Email</th>
-            <th>Gender</th>
-            <th>Phone</th>
-            <th>Birthdate</th>
-            <th>Role</th>
-          </tr>
+            <tr>
+              <th>Вибір</th>
+              <th>Ім'я</th>
+              <th>Призвіще</th>
+              <th>По батькові</th>
+              <th>Email</th>
+              <th>Стать</th>
+              <th>Номер</th>
+              <th>Дата народження</th>
+              <th>Роль</th>
+            </tr>
           </thead>
-          <tbody>
-          </tbody>
+          <tbody></tbody>
         </table>
-        <button id="delete-selected">Delete Selected</button>
-        <button id="duplicate-selected">Duplicate Selected</button>
+        <button id="delete-selected" class="func-btn">Delete Selected</button>
+        <button id="duplicate-selected" class="func-btn">
+          Duplicate Selected
+        </button>
       </div>
       <div class="links">
         <img src="images/book.svg" alt="book" />
