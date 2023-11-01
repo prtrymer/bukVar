@@ -56,10 +56,14 @@ body {
   height: 10%;
 }
 .error-message {
-  font-size: 16px;
-  margin-left: 230px;
-  color: red;
+  font-size: 14px;
+  text-align: center;
+  max-width: 60%;
+  margin: auto;
+  color: rgb(213, 0, 0);
   display: none;
+  margin-bottom: 20px;
+  font-weight: 300;
 }
 .input img {
   width: 28%;
@@ -73,14 +77,14 @@ body {
   display: none;
   align-items: center;
 }
-.input table{
+.input table {
   width: 100%;
   border-collapse: collapse;
 }
-.input th td{
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
+.input th td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
 fieldset {
   max-width: 60%;
   margin: auto;
@@ -96,6 +100,13 @@ legend {
 .gender-name {
   font-weight: 300;
 }
+th {
+  font-weight: 100;
+}
+.func-btn {
+  margin: 10px auto !important;
+}
+
 .input p {
   margin: auto;
   text-align: left;
@@ -208,21 +219,20 @@ legend {
     border-collapse: collapse;
     width: 100%;
   }
-
-  .input th, td {
+  .input th,
+  td {
     display: block;
     width: 100%;
     padding: 5px 0;
     text-align: left;
     border: none;
   }
-  .input  th:nth-child(5),
+  .input th:nth-child(5),
   td:nth-child(5),
   th:nth-child(8),
   td:nth-child(8) {
     display: none;
   }
-
 
   .input img {
     width: 30%;
